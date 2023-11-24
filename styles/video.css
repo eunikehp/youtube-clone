@@ -1,0 +1,74 @@
+.thumbnail {
+  /*width: 300px;*/
+  width: 100%; 
+  /*display: block; /* ga diperlukan lagi. memblock 1 baris jadi item ini aja */
+  /*
+  height: 300px;
+  object-fit: contain; /* contain/cover.  adjust image into spesific size 
+  object-position: left; /*right/top/bottom. show which part of image showed 
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;*/
+  margin-bottom: 10px;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 500; /*semi bold*/
+  /*font-style: italic;
+  text-align: center;*/
+  width: 250px;
+  line-height: 20px; /* jarak antar paragraf */
+  margin-bottom: 12px; /*this will overwrite the p style*/
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb( 96, 96, 96);
+}
+
+
+.video-author {
+  margin-bottom: 4px;
+  /* display: inline-block;  membuat itemnya jadi tidak block 1 baris*/ 
+}
+
+.video-preview {
+  /*width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px; diganti column-gap di grid*/ 
+}
+
+.channel-picture {
+  /*display: inline-block; diganti jadi element di video-grid
+  width: 50px;
+  vertical-align: top;*/
+}
+
+.video-info {
+  /*display: inline-block; diganti jadi element di video-grid
+  width: 200px;*/
+}
+
+.profile-picture {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.thumbnail.row {
+  margin-bottom: 12px;
+
+}
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
