@@ -10,6 +10,17 @@
   flex-direction:row;
   justify-content: space-between;
   
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(236, 236, 236);
+
+  z-index: 100; /*larger z-index will appear at the front */
 }
 
 .left-section {
@@ -21,10 +32,12 @@
   height: 24px;
   margin-left: 24px;
   margin-right: 24px;
+  cursor: pointer;
 }
 
 .youtube-logo {
   height: 20px;
+  cursor: pointer;
 }
 
 .middle-section {
@@ -62,11 +75,50 @@
   border-color: rgb(192,192,192);
   margin-left: -1px;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.search-button, 
+.voice-search-button,
+.upload-icon-container,
+.youtube-app-icon-container,
+.notifications-icon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.youtube-app-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px;
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-app-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+  opacity: 1;
 }
 
 .search-icon {
   height: 25px;
-  margin-top: 4px;
 }
 
 .voice-search-button {
@@ -75,6 +127,7 @@
   border-radius: 20px;
   border-style: none;
   background-color: rgb(248,248,248);
+  cursor: pointer;
 }
 
 .voice-search-icon {
@@ -93,17 +146,39 @@
 
 .upload-icon {
   height: 25px;
+  cursor: pointer;
 }
 
 .youtube-app-icon {
   height: 25px;
+  cursor: pointer;
 }
 
 .notifications-icon {
   height: 25px;
+  cursor: pointer;
 }
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notification-count {
+  background-color: rgb(188, 19, 19);
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: Roboto, Arial;
+  font-size: 10px;
+  padding: 2px 4px 2px 4px; 
+  border-radius: 10px;
+}
+
 
 .my-channel {
   height: 32px;
   border-radius: 16px;
+  cursor: pointer;
 }
+

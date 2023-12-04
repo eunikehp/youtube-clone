@@ -6,7 +6,10 @@
   <body style="
     height:3000px;
     padding-top: 60px;
-  ">
+    padding-left: 80px; 
+  "> <!-- padding top geser content ke bawah-->
+  <!-- padding left geser content ke kanan-->
+
     <div style="
       background-color: black;
       color: white;
@@ -15,19 +18,65 @@
       left: 0;
       right: 0;
       height: 50px;
-      ">header</div> <!-- fixed will be floating-->
-      
+      z-index: 2; 
+      ">header</div> <!-- fixed will be floating. placed in the browser window-->
+      <!-- z-index semakin besar semakin di depan dan menimpa div lainnya. normal:0-->
+    
+    <div style="
+    background-color: green;
+    position: fixed;
+    color: white;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    ">sidebar
+      <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      top: 0;
+      right: 0;
+      ">X</div> <!-- absolute= placed on the page-->
+    </div>
+
+    <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: 60px;
+    right: 10px;
+    ">absolute</div> <!-- absolute= placed on the page-->
+
     <div style="
       background-color: lightblue; 
       height: 200px; 
       width: 200px;
       position: static;
-      
-      ">div1</div>
+      ">static</div> <!-- static = standard, always appear at the back-->
     <div style="
       background-color: lightpink;
       height:200px;
-      width: 200px
-    ;">div2</div>
+      width: 200px;
+      position: relative
+    ;">
+      relative <!-- relative = to put absolute element on top of it, 
+        it will position it relative to this element instead of to the page-->
+      <div style="
+        position: absolute;
+        background-color: black;
+        color: white;
+        bottom: 10px;
+        right: 10px;
+      ">
+        5:00
+      </div>
+    </div>
+
+    <p style="
+    margin: 10px 15px 20px 25px;
+    list">eunike</p>
+
+    div 
   </body>
 </html>

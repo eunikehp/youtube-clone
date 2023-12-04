@@ -10,6 +10,13 @@
   border-style: solid;
   border-color: red;*/
   margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 0; /* z-index lebih kecil dari header, jadi munculnya dibelakang header*/
 }
 
 .video-title {
@@ -20,6 +27,7 @@
   width: 250px;
   line-height: 20px; /* jarak antar paragraf */
   margin-bottom: 12px; /*this will overwrite the p style*/
+  cursor: pointer;
 }
 
 .video-author,
@@ -32,6 +40,7 @@
 .video-author {
   margin-bottom: 4px;
   /* display: inline-block;  membuat itemnya jadi tidak block 1 baris*/ 
+  cursor: pointer;
 }
 
 .video-preview {
@@ -53,14 +62,13 @@
 }
 
 .profile-picture {
-  width: 40px;
+  width: 36px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.thumbnail.row {
-  margin-bottom: 12px;
 
-}
+
 .video-info-grid {
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -71,4 +79,17 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
+}
+
+.video-time {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 4px 4px 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
 }
